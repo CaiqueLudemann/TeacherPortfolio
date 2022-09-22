@@ -1,1 +1,121 @@
-@import "~bootstrap/scss/bootstrap";
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    background-color: black;
+    transform: all 300ms;
+}
+
+
+/* navbar */
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(24, 23, 23);
+    box-shadow: 1px 1px 5px 2px rgba(21, 26, 68, 1);
+}
+
+#logo{
+    padding: 1rem 1.5rem;
+    background-color: rgba(57, 58, 65, 0.466);
+    font-size: 2rem;
+    font-weight: 900;
+    text-shadow: 2px 2px 3px rgba(255, 0, 0, 0.507);
+    border-bottom-right-radius: 10px;
+    box-shadow: 1px 1px 10px 2px rgba(0, 0, 125, 1);
+
+    
+    color: white;
+}
+
+
+#toggler{
+    display: none;
+}
+
+#toggler-button{
+    transition: transform, all 650ms;
+    border-radius: 10px;
+    display: block;
+    padding: 0.3em;
+    cursor: pointer;
+    color: white;
+}
+
+
+
+
+
+
+#nav-ul{
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.nav-li{
+    list-style: none;
+    margin-right: 5vw;
+}
+
+.nav-li a{
+    text-decoration: none;
+    color: white;
+    padding: 22px;
+    transition: all 300ms;
+    
+}
+
+.nav-li a:active{
+
+}
+
+#drop-down{
+    display: none;
+    background-color: rgb(39, 36, 36);
+    position: absolute;
+    right: 0;
+    top: 50px;
+}
+
+#drop-down-ul{
+    list-style: none;
+    padding: 15px;
+    line-height: 2.5em;
+
+}
+
+
+
+.drop-down-li a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+@media screen and (max-width: 550px){
+	#nav-ul{
+        display: none;
+    }
+    #toggler{
+        display: block;
+        margin-right: 1rem;
+        color: black;
+    }
+}
+
+@media screen and (min-width: 550px){
+    #drop-down-ul{
+        display: none;
+    }
+}
