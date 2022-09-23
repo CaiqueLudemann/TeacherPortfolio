@@ -18,43 +18,18 @@ const dropDownMenu = document.getElementById('drop-down');
 
 //nav events&functions
 function navDarken() {
-  if (window.scrollY === 0) {
-    setTimeout(() => {
-      navBar.style.backgroundColor = "rgba(24, 23, 23, 0)"
-    }, 1600);
-    
-    
-  } else {
-    setTimeout(() => {
-      navBar.style.backgroundColor = "rgba(24, 23, 23, 0.2)";
-    }, 100);
-    setTimeout(() => {
-      navBar.style.backgroundColor = "rgba(24, 23, 23, 0.4)"
-    }, 200);
-    setTimeout(() => {
-      navBar.style.backgroundColor = "rgba(24, 23, 23, 0.6)"
-    }, 400);
-    setTimeout(() => {
-      navBar.style.backgroundColor = "rgba(24, 23, 23, 0.8)"
-    }, 800);
+  if (navBar.className === 'nav') {
+    navBar.classList.add('navOnScroll');
+    navBar.classList.remove('nav');
+    console.log(navBar.className);
+  }
+  if (window.pageYOffset === 0 && navBar.className === 'navOnScroll') {
+    navBar.classList.add('nav');
+    navBar.classList.remove('navOnScroll');
+    console.log(navBar.className);
   }
 };
 window.onscroll = navDarken;
-console.log(window.scrollY)
-
-
-
-// function navLighten() {
-//   if (document.body.scrollTop === 0) {
-//     setTimeout(() => {
-//       navBar.style.backgroundColor = "rgba(24, 23, 23, 0)";
-//     }, 300);
-//   };
-// };
-
-
-// window.onscroll = navLighten;
-
 
 function navLinkClicked() {
   navInicio.style.color = 'black';
@@ -69,6 +44,7 @@ function navLinkUnclicked() {
 
 navInicio.onmouseover = navLinkClicked;
 navInicio.onmouseout = navLinkUnclicked;
+navInicio.onclick = navLinkClicked;
 
 
 
