@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
-    <title>Document</title>
+    <title>Ludemann</title>
     <!-- <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -20,24 +20,29 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/main.js" defer></script>
-
   </head>
 
   <body>
     <!--nav-->
     <div class="nav">
-      <side id="logo">Ludemann</side>
+      <side class="logo">Ludemann</side>
       <ul id="nav-ul">
-        <li class="nav-li"><a id="inicio" href="">Início</a></li>
-        <li class="nav-li"><a id="sobre" href="">Sobre</a></li>
-        <li class="nav-li"><a id="metodo" href="">Método</a></li>
-        <li class="nav-li"><a id="precos" href="">Preços</a></li>
+        <li class="nav-li">
+          <a class="navLink" id="inicio" href="">Início</a>
+        </li>
+        <li class="nav-li"><a class="navLink" id="sobre" href="">Sobre</a></li>
+        <li class="nav-li">
+          <a class="navLink" id="metodo" href="">Método</a>
+        </li>
+        <li class="nav-li">
+          <a class="navLink" id="precos" href="">Preços</a>
+        </li>
       </ul>
       <aside id="toggler">
         <i class="fa-sharp fa-solid fa-grip-lines" id="toggler-button"></i>
       </aside>
       <!-- dropdown -->
-      <div id="drop-down">
+      <div class="drop-down">
         <ul id="drop-down-ul">
           <li class="drop-down-li"><a href="" id="inicio">Início</a></li>
           <li class="drop-down-li"><a href="" id="sobre">Sobre</a></li>
@@ -47,10 +52,27 @@
       </div>
     </div>
     <!-- home -->
+    <div class="homeSection">
+      <div class="callingText">
+        <p class="calling-paragraph">O que o impede de crescer é a mesmo que pode empurrá-lo às aulturas;
+          Vai continuar refém do inglês, ou vamos dominá-lo?</p>
+          <button class="calling-button">quero aprender inglês</button>
+      </div>
+      
+      <div class="video-wrapper">
+        <video
+        src="/src/extras/mountainskies.mp4"
+        class="homeVideo"
+        autoplay
+        muted
+        loop
+      ></video>
+      </div>
+      
+    </div>
 
-      <video src="/src/extras/mountainskies.mp4" class="homeVideo" autoplay muted loop></video>
     <!-- about -->
-
+    
     <!-- método -->
     <section></section>
 
@@ -61,8 +83,38 @@
 
     <!-- footer -->
     <footer></footer>
-
-
-
   </body>
 </html>
+
+
+
+<!-- <div class="homeBanner">
+        <p id="homeBannerText">
+          O que o impede de crescer é a mesmo que pode empurrá-lo às aulturas;
+          Vai continuar refém do inglês, ou vamos dominá-lo?
+        </p>
+        <div class="buttonContainer">
+          <button class="homeBannerButton">quero aprender inglês</button>
+        </div>
+        <br />
+      </div>
+      <div class="registerBanner">
+        <div id="registerBannerText">
+          <b class="textBannerTitle">POR QUE LUDEMANN?</b>
+          <br /><br />
+          <i class="fa-regular fa-registered"></i>
+          <p class="registeredText">Aqui você aprende inglês nativo!</p>
+          <br /><br />
+          <i class="fa-regular fa-clock"></i>
+          <p class="clockText">
+            Otimizamos seu tempo, com aulas ricas em conteúdo e com abordagem
+            prática.
+          </p>
+          <br /><br />
+          <i class="fa-solid fa-book"></i>
+          <p class="connectionText">
+            Ensinamos você a se expressar respeitando as nuances da formalidade.
+          </p>
+          <br /><br />
+        </div>
+      </div> -->
