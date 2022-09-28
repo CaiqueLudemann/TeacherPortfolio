@@ -9,15 +9,16 @@ html,
 body {
   min-width: 320px;
   min-height: 480px;
-  height: 1000px;
+  height: 100%;
   background-color: black;
 }
 
 /* navbar ===============================================================*/
 .nav {
   display: flex;
-  position: sticky;
-  top: 0;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
   justify-content: space-between;
   align-items: baseline;
   /* background-color: rgba(255, 255, 255, 0.1); */
@@ -38,8 +39,9 @@ body {
 
 .navOnScroll {
   display: flex;
-  position: sticky;
-  top: 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
   justify-content: space-between;
   align-items: baseline;
   background-color: rgba(24, 23, 23, 1);
@@ -186,7 +188,7 @@ body {
   display: none;
   position: absolute;
   right: 0;
-  top: 50px;
+  /* top: 50px; */
 }
 
 .drop-downOnClick {
@@ -199,7 +201,7 @@ body {
   background-color: rgb(39, 36, 36);
   position: absolute;
   right: 0;
-  top: 100px;
+  bottom: 40vh;
   animation: fadeIn 1s;
 }
 @keyframes fadeIn {
@@ -261,18 +263,23 @@ body {
 } */
 
 .video-wrapper {
+  display: flex;
+  position: absolute; 
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
 }
 
 .homeVideo {
-  position: absolute;
-  top: 0px;
-  bottom: 0;
-  right: 0;
   z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* media queries ========================================================================= */
-@media (min-aspect-ratio: 16/9) {
+/* @media (min-aspect-ratio: 16/9) {
   .homeVideo {
     width: 100%;
     height: auto;
@@ -283,21 +290,19 @@ body {
     width: 100%;
     height: auto;
   }
-}
+} */
 
 @media (max-width: 767px) {
   .homeVideo {
     display: none;
   }
   .homeSection {
+    min-height: 700px;
     position: absolute;
     background: url("/src/extras/pexels-mirsad-mujanovic-691034.jpg");
     background-size: cover;
     background-position: center;
   }
-}
-
-@media screen and (max-width: 700px) {
   #nav-ul {
     display: none;
   }
@@ -307,8 +312,12 @@ body {
   }
 }
 
-@media screen and (min-width: 700px) {
-  #drop-down-ul {
+
+@media screen and (min-width: 767px) {
+  #drop-down {
+    display: none;
+  }
+  .drop-downOnClick{
     display: none;
   }
 }
