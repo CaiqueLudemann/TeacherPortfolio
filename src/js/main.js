@@ -1,23 +1,70 @@
 //section elements
 const body = document.querySelector('body');
+const homeSection = document.querySelector('.homeSection');
+const aboutSection = document.querySelector('.about-section');
+const methodSection = document.querySelector('.method-section');
+const priceSection = document.querySelector('.price-section');
 //nav elements
 const navBar = document.querySelector('.nav');
 const navList = document.querySelectorAll('.nav-li');
 const logo = document.querySelector('.logo');
-// const navLinks = document.querySelector('.navLink') //cant find how multiple elements
-const navInicio = document.getElementById('inicio');
-const navSobre = document.getElementById('sobre');
-const navMetodo = document.getElementById('metodo');
-const navPrecos = document.getElementById('precos');
+//dropdown anchor links
+const inicio = document.querySelectorAll('.inicio');
+const sobre = document.querySelectorAll('.sobre');
+const metodo = document.querySelectorAll('.metodo');
+const precos = document.querySelectorAll('.precos');
 //toggler
 const togglerButton = document.getElementById('toggler-button');
 const dropDownMenu = document.querySelector('.drop-down');
 //home elements
-//...
+
+//about elements
+const aboutSectionWrap = document.querySelector('.about-section-wrap');
+const aboutParagraphs = document.querySelectorAll('.about-paragraphs')
 //==============================================
 
 
 //nav events&functions
+inicio.forEach(item => {
+  item.addEventListener('click', function () {
+    homeSection.style.display = 'flex';
+    aboutSection.style.display = 'none';
+    methodSection.style.display = 'none';
+    priceSection.style.display = 'none';
+  })
+})
+
+sobre.forEach(item => {
+  item.addEventListener('click', function () {
+    homeSection.style.display = 'none';
+    aboutSection.style.display = 'flex';
+    methodSection.style.display = 'none';
+    priceSection.style.display = 'none';
+  })
+})
+
+metodo.forEach(item => {
+  item.addEventListener('click', function () {
+    homeSection.style.display = 'none';
+    aboutSection.style.display = 'none';
+    methodSection.style.display = 'flex';
+    priceSection.style.display = 'none';
+  })
+})
+
+precos.forEach(item => {
+  item.addEventListener('click', function(){
+    homeSection.style.display = 'none';
+    aboutSection.style.display = 'none';
+    methodSection.style.display = 'none';
+    priceSection.style.display = 'flex';
+  })
+})
+
+
+
+
+//nav effects
 function navDarken() {
   if (navBar.className === 'nav') {
     navBar.classList.add('navOnScroll');
@@ -52,7 +99,6 @@ togglerButton.addEventListener('click', function () {
     togglerButton.id = 'toggler-buttonOnClick';
     dropDownMenu.classList.add('drop-downOnClick');
     dropDownMenu.classList.remove('drop-down');
-
   }
   else {
     togglerButton.id = 'toggler-button';
@@ -66,3 +112,29 @@ dropDownMenu.addEventListener('mouseleave', function () {
   dropDownMenu.classList.add('drop-down');
   dropDownMenu.classList.remove('drop-downOnClick');
 })
+
+
+// inicioOnScroll.addEventListener('click', function () {
+//   homeSection.style.display = 'flex';
+//   aboutSection.style.display = 'none';
+//   methodSection.style.display = 'none';
+//   priceSection.style.display = 'none';
+// });
+// sobreOnScroll.addEventListener('click', function () {
+//   homeSection.style.display = 'none';
+//   aboutSection.style.display = 'flex';
+//   methodSection.style.display = 'none';
+//   priceSection.style.display = 'none';
+// });
+// metodoOnScroll.addEventListener('click', function () {
+//   homeSection.style.display = 'none';
+//   aboutSection.style.display = 'none';
+//   methodSection.style.display = 'flex';
+//   priceSection.style.display = 'none';
+// });
+// precosOnScroll.addEventListener('click', function () {
+//   homeSection.style.display = 'none';
+//   aboutSection.style.display = 'none';
+//   methodSection.style.display = 'none';
+//   priceSection.style.display = 'flex';
+// });

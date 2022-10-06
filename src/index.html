@@ -28,37 +28,37 @@
       <side class="logo">Ludemann</side>
       <ul id="nav-ul">
         <li class="nav-li">
-          <a class="navLink" id="inicio" href="">Início</a>
+          <b class="navLink inicio" id="inicio">Início</b>
         </li>
-        <li class="nav-li"><a class="navLink" id="sobre" href="">Sobre</a></li>
+        <li class="nav-li"><b class="navLink sobre" id="sobre">Sobre</b></li>
         <li class="nav-li">
-          <a class="navLink" id="metodo" href="">Método</a>
+          <b class="navLink metodo" id="metodo">Método</b>
         </li>
         <li class="nav-li">
-          <a class="navLink" id="precos" href="">Preços</a>
+          <b class="navLink precos" id="precos">Preços</b>
         </li>
       </ul>
       <aside id="toggler">
         <i class="fa-sharp fa-solid fa-grip-lines" id="toggler-button"></i>
       </aside>
       <!-- dropdown -->
-      <div class="drop-down">
+    </div>
+    <div class="drop-down">
         <ul id="drop-down-ul">
-          <li class="drop-down-li"><a href="" id="inicio">Início</a></li>
-          <li class="drop-down-li"><a href="" id="sobre">Sobre</a></li>
-          <li class="drop-down-li"><a href="" id="metodo">Método</a></li>
-          <li class="drop-down-li"><a href="" id="precos">Preços</a></li>
+          <li class="drop-down-li"><b href="" class="inicio">Início</b></li>
+          <li class="drop-down-li"><b href="" class="sobre">Sobre</b></li>
+          <li class="drop-down-li"><b href="" class="metodo">Método</b></li>
+          <li class="drop-down-li"><b href="" class="precos">Preços</b></li>
         </ul>
       </div>
-    </div>
     <!-- home -->
-    <div class="homeSection">
+    <div class="homeSection" id="homeSection">
       <div class="callingText">
         <p class="calling-paragraph">
           O que o impede de crescer é o mesmo que pode empurrá-lo às alturas;
           Continuará refém do inglês, ou irá dominá-lo?
         </p>
-        <button class="calling-button">
+        <button class="calling-button" onclick="tidioChatApi.open()">
           <p class="calling-button-text">aprender inglês nativo</p>
         </button>
       </div>
@@ -74,66 +74,38 @@
       </div>
     </div>
     <!-- about -->
-    <div class="about-section">
+    <div class="about-section" id="about-section">
       <div class="about-section-wrap">
-        <div class="about-paragraphs">
-        <i class="fa-regular fa-registered"></i>
-        <p class="registeredText">Aqui você aprende inglês nativo!</p>
-        <br /><br />
-        <i class="fa-regular fa-clock"></i>
-        <p class="clockText">
-          Otimizamos seu tempo, com aulas ricas em conteúdo e com abordagem
-          prática.
-        </p>
-        <br /><br />
-        <i class="fa-solid fa-book"></i>
-        <p class="connectionText">
-          Ensinamos você a se expressar respeitando as nuances da formalidade.
-        </p>
-      </div>
-      </div>
-    </div>
-
-    <!-- método -->
-    <section></section>
-
-    <!-- preço -->
-    <section></section>
-
-    <!-- contato -->
-
-    <!-- footer -->
-    <footer></footer>
-  </body>
-</html>
-
-<!-- <div class="homeBanner">
-        <p id="homeBannerText">
-          O que o impede de crescer é a mesmo que pode empurrá-lo às aulturas;
-          Vai continuar refém do inglês, ou vamos dominá-lo?
-        </p>
-        <div class="buttonContainer">
-          <button class="homeBannerButton">quero aprender inglês</button>
-        </div>
-        <br />
-      </div>
-      <div class="registerBanner">
-        <div id="registerBannerText">
-          <b class="textBannerTitle">POR QUE LUDEMANN?</b>
-          <br /><br />
-          <i class="fa-regular fa-registered"></i>
+        <div class="about-paragraphs nativo-paragraph">
+          <i class="about-fa fa-regular fa-registered"></i>
           <p class="registeredText">Aqui você aprende inglês nativo!</p>
-          <br /><br />
-          <i class="fa-regular fa-clock"></i>
+        </div>
+        <div class="about-paragraphs tempo-paragraph">
+          <i class="about-fa fa-regular fa-clock"></i>
           <p class="clockText">
             Otimizamos seu tempo, com aulas ricas em conteúdo e com abordagem
             prática.
           </p>
-          <br /><br />
-          <i class="fa-solid fa-book"></i>
+        </div>
+        <div class="about-paragraphs formalidade-paragraph">
+          <i class="about-fa fa-solid fa-book"></i>
           <p class="connectionText">
             Ensinamos você a se expressar respeitando as nuances da formalidade.
           </p>
-          <br /><br />
         </div>
-      </div> -->
+      </div>
+    </div>
+
+    <!-- método -->
+    <div class="method-section"></div>
+
+    <!-- preço -->
+    <div class="price-section"></div>
+    <!-- contato -->
+
+    <!-- footer -->
+
+    <script src="//code.tidio.co/gfb1h8fxhygcoymkexk4zdsqvigs21aj.js" async>
+    </script>
+  </body>
+</html>
